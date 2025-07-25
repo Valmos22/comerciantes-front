@@ -1,0 +1,78 @@
+.input_easystock {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    line-height: normal;
+    color: var(--color-text-white);
+    border: 1px solid var(--color-text-white);
+    border-radius: 6px;
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+}
+
+.input_easystock input {
+    width: 100%;
+    font-size: 16px;
+    background-color: transparent;
+    color: var(--color-text-white);
+    outline: none;
+    padding: 3px 8px;
+}
+
+.input_easystock input:focus {
+    border-color: var(--color-primary);
+}
+
+.input_easystock label {
+    position: absolute;
+    left: 0.5em;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.input_easystock input:focus+label,
+.input_easystock input:not(:placeholder-shown)+label {
+    opacity: 1;
+    transform: translate(-0.5em, -100%) scale(0.8);
+}
+
+.dropdown-suggestions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 10;
+    width: 100%;
+    background-color: #1b263b;
+    border: 1px solid #e5e7eb;
+    color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
+        0 1px 2px rgba(0, 0, 0, 0.06);
+    max-height: 15rem;
+    overflow-y: auto;
+}
+
+/*RESPONSIVE*/
+/* Teléfonos pequeños */
+@media (max-width: 479px) {
+    .dropdown-suggestions {
+        width: 100%;
+        position: absolute;
+        top: 22rem;
+    }
+}
+
+/* Teléfonos grandes */
+@media (min-width: 480px) and (max-width: 767px) {
+    .dropdown-suggestions {
+        width: 100%;
+        position: absolute;
+        top: 22rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}

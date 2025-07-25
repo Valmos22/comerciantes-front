@@ -1,0 +1,134 @@
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    border-radius: 1rem;
+}
+
+.table th{
+background-color:transparent;
+font-size:  0.9rem;
+padding: 1rem;
+font-weight: bold;
+}
+
+.table td {
+    padding: 1rem;
+    font-size: 0.9rem;
+    vertical-align: middle; 
+    background-color: #13273c;
+    border:  1.5rem;
+}
+
+.table th {
+    font-weight: 500;
+}
+
+.table td {
+    font-weight: bold;
+    color: white;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.row-separated {
+    
+    border-radius: 8px; 
+    margin-bottom: 8px; 
+}
+
+.role-button {
+    display: inline-block;
+    width: 120px;
+    padding: 4px 8px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center; 
+}
+
+.status-activo, .status-inactivo {
+    width: 8rem;
+    height: auto;
+    display: inline-block;
+    padding: 4px 20px 4px 24px;
+    border-radius: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.status-inactivo {
+    background-color: #ffcccc;
+    color: #ff3333;
+}
+
+.categoria-class, .medida-class {
+    /* width: max-content; */
+    width: 10rem;
+    height: auto;
+    display: inline-block;
+    padding: 4px 20px 4px 24px;
+    border-radius: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.categoria-class {
+    background-color: #D6F0FE;
+    color: #3EB5FE;
+}
+
+.medida-class {
+    background-color: #ECECEC;
+    color: #A0A0A0;
+}
+
+.status-activo {
+    background-color: #ccffcc;
+    color: #33cc33;
+}
+
+.table td:last-child {
+    text-align: right;
+    border-top-right-radius:   15px;
+    border-bottom-right-radius:  15px;
+}
+
+.table td:first-child {
+    text-align: left;
+    border-top-left-radius:  15px;
+    border-bottom-left-radius:  15px;
+}
+
+.role-vendedor{
+    display: inline-block;
+    background-color:#D6F0FE;
+    color: #3EB5FE;
+    width: 120px;
+}
+
+.estado-anulado > span {
+    background-color: #ffcccc;
+    color: #ff3333;
+}
+.estado-pendiente > span {
+    background-color: #ECECEC;
+    color: #A0A0A0;
+}
+.estado-activo > span, .estado-pagado > span {
+    background-color: #ccffcc;
+    color: #33cc33;
+}
+
+.estado-pagado > span, .estado-activo > span, .estado-pendiente > span, .estado-anulado > span {
+    width: 8rem;
+    height: auto;
+    display: inline-block;
+    padding: 4px 20px 4px 24px;
+    border-radius: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+

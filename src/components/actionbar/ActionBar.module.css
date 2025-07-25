@@ -1,0 +1,26 @@
+.container_action_bar .Agregar {
+    display: none;
+}
+
+/*RESPONSIVE*/
+/* Teléfonos pequeños */
+@media (max-width: 479px) {
+    .container_action_bar {
+        flex-direction: column-reverse;
+    }
+    .container_div .div_input {
+        width: 75%;
+    }
+}
+
+/* Teléfonos grandes */
+@media (min-width: 480px) and (max-width: 767px) {
+    .container_action_bar {
+        flex-direction: column-reverse;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
