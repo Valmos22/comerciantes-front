@@ -1,0 +1,35 @@
+.td_table {
+    width: -webkit-fill-available;
+    margin: 3px !important;
+    padding: 4px !important;
+    text-align: center;
+    color: black;
+}
+
+.comer_container {
+    padding: 6rem;
+}
+
+.estado_Activo {
+  display: inline-block;
+  color: green;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.estado_Inactivo {
+  display: inline-block;
+  color: red;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* .td_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.td_buttons button{
+    color: black;
+}

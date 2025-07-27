@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import styles from './style.module.css';
 
 const Login = () => {
     const { login } = useAuth();
@@ -46,8 +47,15 @@ const Login = () => {
     };
 
     return (
-        <div className="max-w-sm mx-auto p-6 rounded-lg shadow bg-white dark:bg-gray-800">
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <div className={`rounded-lg shadow bg-white dark:bg-gray-800 ${styles.login_container}`}>
+            <div className={`${styles.login_p}`}>
+                <p className='text-gray-900 dark:text-white'>
+                    Digita tu documento de identidad del propietario o 
+                    representante legal y la contraseña
+                </p>
+                <hr />
+            </div>
+            <form onSubmit={handleSubmit(onSubmit)} className='p-6 '>
                 <div className="mb-4">
                     <label className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">
                         Correo Electrónico
@@ -85,7 +93,7 @@ const Login = () => {
                         {...register('aceptarTerminos')}
                         className="w-4 h-4 border rounded"
                     />
-                    <label htmlFor="terminos" className="ml-2 text-sm text-gray-900">
+                    <label htmlFor="terminos" className="ml-2 text-sm text-gray-900 dark:text-white">
                         Acepto los términos y condiciones
                     </label>
                 </div>
@@ -94,7 +102,7 @@ const Login = () => {
 
                 <button
                     type="submit"
-                    className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+                    className="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition"
                     disabled={loading}
                 >
                     {loading ? 'Iniciando sesión...' : 'Iniciar Sesión'}

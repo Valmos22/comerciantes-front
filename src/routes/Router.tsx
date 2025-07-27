@@ -6,6 +6,7 @@ import PrivateRoute from './PrivateRoute';
 const Home = lazy(() => import('../pages/home/Home'));
 const Dashboard = lazy(() => import('../pages/dashboard/Dashboard'))
 const ComercianteForm = lazy(() => import('../pages/comerciantes/ComercianteForm'));
+const ComerciantesFormEdit = lazy(() => import('../pages/comerciantes/ComerciantesFormEdit'));
 const NotFound = lazy(() => import('../pages/notFound/NotFound'));
 
 const router = createBrowserRouter([
@@ -17,16 +18,28 @@ const router = createBrowserRouter([
         index: true,
         element: (
           <Suspense fallback={<p>Cargando...</p>}>
-              <Home />
+            <Home />
           </Suspense>
         )
       },
       {
         path: '/dashboard/comerciantes/nuevo',
         element: (
-          <Suspense fallback={<p>Cargando Venta...</p>}>
-            <ComercianteForm />
-          </Suspense>
+          <PrivateRoute>
+            <Suspense fallback={<p>Cargando...</p>}>
+              <ComercianteForm />
+            </Suspense>
+          </PrivateRoute>
+        )
+      },
+      {
+        path: '/dashboard/comerciantes/editar/:id',
+        element: (
+          <PrivateRoute>
+            <Suspense fallback={<p>Cargando...</p>}>
+              <ComerciantesFormEdit />
+            </Suspense>
+          </PrivateRoute>
         )
       },
       {

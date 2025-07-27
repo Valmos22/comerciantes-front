@@ -1,0 +1,53 @@
+.links {
+    width: 75%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.links .links_cont {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+
+.links_imag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.links_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    font-size: 12px;
+    width: 3vh;
+    height: 3vh;
+    color: gray;
+    border-radius: 100%;
+}
+
+.links_img svg {
+    transform: scale(1.5);
+}
+
+.data_user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.data_user h2 {
+    font-size: 12px;
+}
+
+.data_user p {
+    font-size: 10px;
+}

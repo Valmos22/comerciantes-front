@@ -39,6 +39,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
                 nombre: decoded.sub,
                 rol: decoded.rol,
             });
+
+            console.log(setUser)
         }
     }, [token]);
 

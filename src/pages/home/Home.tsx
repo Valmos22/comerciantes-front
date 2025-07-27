@@ -4,8 +4,8 @@ import style from './style.module.css';
 const Home = () => {
   return (
     <>
-    <div className={`flex flex-col max-w-screen-xl mx-auto p-4 h-screen ${style.container_home}`}>
-      <h1>Bienvenido</h1>
+    <div className={`flex flex-col max-w mx-auto p-4 h-screen ${style.container_home}`}>
+      <h1 className={`${style.h1}`}>Debes iniciar sesion para acceder a la plataforma</h1>
       <Login />
     </div>
     </>
