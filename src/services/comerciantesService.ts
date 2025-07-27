@@ -6,8 +6,8 @@ export const getComerciantes = async (): Promise<Comerciante[]> => {
   return res.data.data || res.data;
 };
 
-export const createOrUpdateComerciante = async (data: any, id: number): Promise<void> => {
-  if (id) {
+export const createOrUpdateComerciante = async (data: any): Promise<void> => {
+  if (data.id) {
     await axiosInstance.put(`/comerciantes/${data.id}`, data);
   } else {
     await axiosInstance.post('/comerciantes', data);

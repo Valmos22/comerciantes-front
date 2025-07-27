@@ -30,6 +30,7 @@ const ComerciantesFormEdit = () => {
             console.log('Datos enviados:', data);
 
             const dataSend = {
+                id: Number(id),
                 "nombreRazonSocial": data.nombreRazonSocial,
                 "municipio": data.municipio,
                 "telefono": data.telefono,
@@ -37,7 +38,7 @@ const ComerciantesFormEdit = () => {
                 "estado": "Activo"
             }
 
-            await createOrUpdateComerciante(dataSend, comerciante?.id);
+            await createOrUpdateComerciante(dataSend);
 
             toast.success('Comerciante actualizado exitosamente');
             navigate('/dashboard/comerciantes/reporte')
@@ -46,8 +47,6 @@ const ComerciantesFormEdit = () => {
             console.error('Error al actualizar el comerciante:', error);
         }
     };
-
-            console.log(comerciante)
 
     return (
         <div className="mt-7" style={{ marginTop: "7rem" }}>
