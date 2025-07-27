@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "f38175f9-b942-4c75-9d6d-627df60740b6",
+		"name": "Ol Software Prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5948146"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"correoElectronico\": \"admin@gmail.com\",\r\n  \"contrasena\": \"112233\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar municipios",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2wiOiJBZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzUzNDYxNzAwLCJleHAiOjE3NTM0NjUzMDB9.XN9JLLFG7lZekFmVtKP7djyBgO9sF8P3etdhGTI1czE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/municipios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"municipios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar comerciantes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2wiOiJBZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzUzNjUwNzc3LCJleHAiOjE3NTM2NTQzNzd9.lVeaupnSH1M6x6M52dVyUION0a3GgV1Jh1THBslnbFE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/comerciantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"comerciantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear comerciante",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2wiOiJBZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzUzNjUwNzc3LCJleHAiOjE3NTM2NTQzNzd9.lVeaupnSH1M6x6M52dVyUION0a3GgV1Jh1THBslnbFE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombreRazonSocial\": \"Valmos_dev\",\r\n  \"municipio\": \"Medellín\",\r\n  \"telefono\": \"3126722295\",\r\n  \"correoElectronico\": \"valmosdev@gmail.com\",\r\n  \"estado\": \"Activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/comerciantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"comerciantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar comerciante id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2wiOiJBZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzUzNDY1NTY5LCJleHAiOjE3NTM0NjkxNjl9.8XdNSAoDf180Pu-8QU5BO_D4YMPOcxteen3JQE2IZU0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/comerciantes/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"comerciantes",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver estadisticas de comerciante",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2wiOiJBZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzUzNDY4NzYxLCJleHAiOjE3NTM0NzIzNjF9.LG8dAsuKHZ-81_bnYY64gFfk0dzDZA0kuwfbd3XwVp0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/comerciantes/estadisticas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"comerciantes",
+						"estadisticas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Descargar csv",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `\r",
+							"<style type=\"text/css\">\r",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+							"    .tftable tr {background-color:#ffffff;}\r",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+							"    .tftable tr:hover {background-color:#e0ffff;}\r",
+							"</style>\r",
+							"\r",
+							"<table class=\"tftable\" border=\"1\">\r",
+							"    <tr>\r",
+							"        <th>Nombre o razón social</th>\r",
+							"        <th>Municipio</th>\r",
+							"        <th>Teléfono</th>\r",
+							"        <th>Correo Electrónico</th>\r",
+							"        <th>Fecha Registro</th>\r",
+							"        <th>Estado</th>\r",
+							"        <th>Cantidad Establecimientos</th>\r",
+							"        <th>Total Ingresos</th>\r",
+							"        <th>Cantidad Empleados</th>\r",
+							"    </tr>\r",
+							"\r",
+							"    {{#each response}}\r",
+							"        <tr>\r",
+							"            <td>{{nombre}}</td>\r",
+							"            <td>{{municipio}}</td>\r",
+							"            <td>{{telefono}}</td>\r",
+							"            <td>{{correo}}</td>\r",
+							"            <td>{{fechaRegistro}}</td>\r",
+							"            <td>{{estado}}</td>\r",
+							"            <td>{{cantidadEstablecimientos}}</td>\r",
+							"            <td>{{totalIngresos}}</td>\r",
+							"            <td>{{cantidadEmpleados}}</td>\r",
+							"        </tr>\r",
+							"    {{/each}}\r",
+							"</table>\r",
+							"`;\r",
+							"\r",
+							"function constructVisualizerPayload() {\r",
+							"    var csvData = pm.response.text();\r",
+							"    var rows = csvData.split('\\n').slice(1); // Skip the header row\r",
+							"    var visualizerData = rows.map(function(row) {\r",
+							"        var columns = row.split('|');\r",
+							"        return {\r",
+							"            nombre: columns[0] || 'N/A',\r",
+							"            municipio: columns[1] || 'N/A',\r",
+							"            telefono: columns[2] || 'N/A',\r",
+							"            correo: columns[3] || 'N/A',\r",
+							"            fechaRegistro: columns[4] || 'N/A',\r",
+							"            estado: columns[5] || 'N/A',\r",
+							"            cantidadEstablecimientos: columns[6] || 'N/A',\r",
+							"            totalIngresos: columns[7] || 'N/A',\r",
+							"            cantidadEmpleados: columns[8] || 'N/A'\r",
+							"        };\r",
+							"    });\r",
+							"\r",
+							"    return { response: visualizerData };\r",
+							"}\r",
+							"\r",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2wiOiJBZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzUzNDY4NzYxLCJleHAiOjE3NTM0NzIzNjF9.LG8dAsuKHZ-81_bnYY64gFfk0dzDZA0kuwfbd3XwVp0",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "text/csv",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/comerciantes/estadisticas/csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"comerciantes",
+						"estadisticas",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
